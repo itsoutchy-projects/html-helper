@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML COLOURS</title>
+</head>
+<body style="background-color: #5c5c5c">
+	<noscript><div id="noscript" style="background-color: red">⚠️ Please enable JavaScript to continue. ⚠️</div></noscript>
+	<div id="header" style="background-color: lightgrey">
+		<a href="index.html">HTML COLOURS</a>
+	</div>
+	<form>
+		<input type="color" id="color">
+		<input type="submit" onclick="ReturnColor()" id="submit" value="upload color">
+	</form>
+	<script>
+		function ReturnColor(c) {
+			//saving the selected color value by ID
+			var c = document.getElementById("color").value;
+			var str = new String("You chose:");
+			//The color is saved as its HEX color code
+			document.write(str + c);
+			document.write("<br/>");
+			//A HEX color code can be converted into RGB code
+			var R = c.slice(1, 3);
+			var G = c.slice(3, 5);
+			var B = c.slice(5);
+			//Displaying the corresponding RGB code
+			document.write("In RGB format, RGB("
+				+ parseInt(R, 16) + ","
+				+ parseInt(G, 16) + ","
+				+ parseInt(B, 16) + ")");
+			document.write("<br/>");
+			//Setting our selected color as Font color
+			var color = c;
+			var str1 = "Your color will appear as this font color";
+			var str2 = str1.fontcolor(c);
+			document.write(str2);
+			//Setting our selected color as Background color
+			document.write("<div style='border: solid; height: 90px; width: 90px; background-color:" + color + "'/>");
+		}
+	</script>
+</body>
+</html>
