@@ -1,33 +1,26 @@
-﻿<html>
+<html>
 <head>
 <title>HTML helper</title>
-<link rel="stylesheet" type="text/css"href="index.css">
-<style>
-/* width */
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px lightblue; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: cyan; 
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #00a7a7; 
-}
-</style>
+<link rel="stylesheet" type="text/css"href="styles.css">
+<meta property="og:title" content="HTML helper" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="index.html" />
+	<meta property="og:image" content="site preview.png" />
+	<meta property="og:site_name" content="HTML helper" />
+	<meta property="fb:admins" content="619421487" />
 </head>
 <body style="background-color: #4b4b4b;">
-    <div class="wrapper">
+    <div class="hiarchy">
+        <b>Contents:</b>
+            <a href="#textarea">textarea</a>
+            <a href="#progress">progress</a>
+            <a href="#fieldset">fieldset</a>
+            <a href="#input">input</a>
+            <a href="#form">form</a>
+            <a href="#datalist">datalists</a>
+            <a href="#video">videos</a>
+    </div>
+    <div class="content">
             <!--<script>
             // Type 1
             document.getElementById('button').addEventListener('click', execCopy);
@@ -100,8 +93,11 @@
                     </div>
                 <p>these are useful for marking places on a form(s)</p>
                 <p>tip: add some basic <a href="https://www.google.com/search?q=how+to+use+CSS&sxsrf=AOaemvLPG2QFD24YFxk7DR7_mkJX_xSrfA%3A1642936403814&source=hp&ei=UzjtYaaUL_6AhbIPkPiOmAs&iflsig=ALs-wAMAAAAAYe1GYy3Iw9VBqO4xeTLsoWoDMIfrD7Ka&ved=0ahUKEwjmifGF38f1AhV-QEEAHRC8A7MQ4dUDCAk&uact=5&oq=how+to+use+CSS&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEOgcIIxDqAhAnOgQIIxAnOgsIABCABBCxAxCDAToOCC4QgAQQsQMQxwEQowI6EQguEIAEELEDEIMBEMcBEKMCOgsILhCABBDHARCjAjoICAAQsQMQgwE6BAgAEAM6CAguELEDEIMBOggIABCABBCxAzoFCC4QgARQgPkBWOmvAmC_xAJoAXAAeACAAW2IAd4IkgEEMTMuMZgBAKABAbABCg&sclient=gws-wiz">CSS</a> to add colour</p>
-                <form action="HTML COLOURS/index.html">
-                    <input type="submit" value="html/CSS colours" class="linkbutton" title="html/CSS colours">
+                <form action="HTML COLOURS/index.html" target="_blank" [....]>
+                    <label class="file-upload">
+                        <input class="hidden" type="submit">
+                           Click me to get your hexadecemal colours!
+                    </label>
                 </form>
                 </div>
     <div id="input" skeleton>
@@ -135,14 +131,13 @@
     &lt;input type=&quot;file&quot;&gt;
     </pre>
                 </div>
-                <p><b>always</b> put an input in a <b>form↓</b> tag</p>
                 <p>inputs are very useful for submit buttons, sign in/login pages, etc</p>
-                <p>tip: add a placeholder="your placeholder" to your text inputs to help users know what they're for</p>
+                <p>tip: add <b>placeholder="your placeholder"</b> to your text inputs to help users know what they're for</p>
     </div>
     <div id="form" skeleton>
                 <h1>form</h1>
-                <p>forms dont show because they are used to add <b>actions</b> to <b>inputs🠕</b>.</p>
-                <p>forms function like this (with an <b>input</b>):</p>
+                <p>forms dont show because they are used to add <b>actions</b> to <a href="#input"><b>inputs🠕</a></b>.</p>
+                <p>forms function like this (with an <b><a href="#input">input🠕</a></b>):</p>
                     <div id="code" style="background-color : #232323;">
     <pre class="prettyprint">
     &lt;form&gt;
@@ -153,8 +148,8 @@
                     </div>
     <div id="datalist" skeleton>
                     <h1>datalist</h1>
-                <p>datalists are used to store items that can be searched for in an <b>input</b>.</p>
-                <p>datalists show like this (with an <b>input</b>):</p>
+                <p>datalists are used to store items that can be searched for in an <b><a href="#input">input🠕</a></b>.</p>
+                <p>datalists show like this (with an <b><a href="#input">input🠕</a></b>):</p>
                 <form>
                     <input type="text" list="options">
                     <datalist id="options">
@@ -162,7 +157,7 @@
                         <option value="list">
                     </datalist>
                 </form>
-                <p>datalists function like this (with an <b>input</b>):</p>
+                <p>datalists function like this (with an <b><a href="#input">input🠕</a></b>):</p>
                     <div id="code" style="background-color : #232323;">
     <pre class="prettyprint">
     &lt;input type=&quot;text&quot; list=&quot;options&quot;&gt;
@@ -179,7 +174,7 @@
                 <p>I think this one is self-explanatory.</p>
                 <p>Video tags show like this:</p>
                 <video width="320" height="240" controls>
-                    <source src="animator vs animation (1) (1).mp4" type="video/mp4">
+                    <source src="animator vs animation (1).mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p>video tags function like this:</p>
