@@ -166,6 +166,7 @@ html {
   animation: spin 2s linear infinite;
 	position:absolute;
 	justify-content:center;
+	align-items:center;
 }
 
 @keyframes spin {
